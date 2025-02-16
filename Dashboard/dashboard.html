@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- === css link === -->
+    <link rel="stylesheet" href="css/dashboard.css" />
+
+    <title>Dashboard</title>
+  </head>
+
+  <body>
+    <section>
+        <div class="dashboard-top">
+            <!-- === DASHBOARD TOP TITLE === -->
+            <div class="dashboard-top-title">
+            <h2>Today at a glance</h2>
+            </div>
+
+            <!-- === TOTAL REVIEWS === -->
+            <div class="total-reviews-section">
+                <!-- === REVIEW CONTAINER === -->
+                <div class="review-container">
+                    <img src="img/total-sale.svg" alt="" />
+                    <div class="review-text">
+                    <p>Pending Service</p>
+                    <h3>0</h3>
+                    </div>
+                </div>
+                <!-- === REVIEW CONTAINER === -->
+                <div class="review-container">
+                    <img src="img/today-purchase.svg" alt="" />
+                    <div class="review-text">
+                    <p>In Progress Service</p>
+                    <h3>0</h3>
+                    </div>
+                </div>
+                <!-- === REVIEW CONTAINER === -->
+                <div class="review-container">
+                    <img src="img/total-expense.svg" alt="" />
+                    <div class="review-text">
+                    <p>Complete Service</p>
+                    <h3>0</h3>
+                    </div>
+                </div>
+                <!-- === REVIEW CONTAINER === -->
+                <div class="review-container">
+                    <img src="img/today-sale.svg" alt="" />
+                    <div class="review-text">
+                    <p>Total Delivered Service</p>
+                    <h3>0</h3>
+                    </div>
+                </div>
+            </div>
+      </div>
+      <!-- === SALES AND INVENTORY GRAPH SECTION === -->
+      <div class="sales-and-inventory-graph-section">
+            <!-- === SALES SECTION === -->
+            <div class="sales-section">
+            <div class="sales-text">
+                <h1>Service Income</h1>
+                <!-- === CALENDAR === -->
+                <div class="sales-calendar">
+                <img src="img/calendar icon.svg" alt="" />
+                <input type="date" />
+                <input type="date" />
+                </div>
+            </div>
+            <!-- === LINE === -->
+            <hr />
+            <!-- === SALES MENU ICON === -->
+            <div class="sales-menu-icon">
+                <img src="img/menu icon.svg" alt="" />
+            </div>
+            <!-- === SALES GRAPH IMAGE === -->
+            <div class="sales-graph-image">
+                <img src="img/sales graph.svg" alt="" />
+            </div>
+        </div>
+
+        <!-- === INVENTORY SECTION === -->
+        <div class="inventory-section">
+          <!-- === INVENTORY TEXT === -->
+          <div class="inventory-text">
+            <h1>Recent Orders</h1>
+            <hr />
+          </div>
+
+          <!-- Recent Orders Table -->
+          <div class="recent-orders-table">
+            <table>
+                <thead>
+                  <tr>
+                    <th scope="col">Service No</th>
+                    <th scope="col">Customer Name</th>
+                    <th scope="col">Total Amount</th>
+                    <th scope="col">Paid Amount</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td data-label="Account"></td>
+                    <td data-label="Due Date"></td>
+                    <td data-label="Amount"></td>
+                    <td data-label="Amount"></td>
+                    <td data-label="Amount"></td>
+                    <td data-label="Period"></td>
+                  </tr>
+                </tbody>
+              </table>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
