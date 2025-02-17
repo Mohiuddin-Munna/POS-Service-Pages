@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+}
+
+body {
+    background-color: var(--gray-white);
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+:root {
+    --gray-white: #F0F1F2;
+    --white: #FFFFFF;
+    --black: #000000;
+    --gray-black: #DDDDDD;
+    --light-black: #212523;
+    --light-black-op: #21252350;
+    --main-green: #157343;
+    --main-light: #37A000;
+    --light-orange: #FD7E14;
+    --green: #008000;
+    --light-green: #e9f6ec;
+    --red: #FF0000;
+    --light-red: #fbeaec;
+    /* === FONTS SIZE FOR HEADING === */
+    --primary-head: 22px;
+    --secondary-head: 1.125rem;
+    --secondary: 1rem;
+    --primary-para: 0.825rem;
+
+}
+
+/* === TOP Nav SECTION === */
+
+.navbar {
+    padding: 20px;
+}
+
+.navbar div {
+    padding: 10px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.navbar button {
+    border: none;
+    background: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+}
+.navbar .active {
+    background-color: #157343;
+    color: white;
+    border-radius: 5px;
+}
+.active a {
+    color: white;
+}
+
+/* === RESPONSIVE FOR MOBILE === */
+@media(max-width: 768px) {
+    .top-section {
+        gap: 30px;
+        height: 60px;
+        padding-left: 10px;
+        margin: 2px;
+    }
+}
+
+/* === TOP Nav SECTION End=== */
+
+
+/* === QUOTATION LIST SECTION === */
+.quotation-list-section {
+    position: sticky;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px rgb(0, 0, 0, 0.1);
+    background-color: var(--white);
+}
+
+/* === quotation-container === */
+.quotation-container {
+    height: 50px;
+    padding: 30px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.quotation-container p {
+    font-size: var(--secondary-head);
+}
+
+.quotation-right-container ul {
+    display: flex;
+    gap: 5px;
+}
+
+.quotation-right-container ul li {
+    padding: 10px;
+    border-radius: 5px;
+    background: var(--main-green);
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.quotation-right-container ul li a {
+    font-size: var(--primary-para);
+    color: var(--white);
+}
+
+.quotation-right-container ul li img {
+    width: 25px;
+}
+
+.container {
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 100%;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+input[type="text"], input[type="number"], textarea, select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: border 0.3s;
+}
+
+input[type="text"]:focus, input[type="number"]:focus, textarea:focus, select:focus {
+    border-color: var(--main-light);
+    outline: none;
+}
+
+/* Dropdown for service type */
+
+.dropdown {
+    position: relative;
+    display: flex;
+}
+
+.dropbtn {
+    background-color: #f1f1f1;
+    border: 1px solid var(--main-light);
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    padding: 15px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.addButton {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border: 1px solid green;
+    cursor: pointer;
+}
+
+/* Modal Design */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 70%;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.close {
+    color: red;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.md-button {
+    margin: 10px 0;background-color: #157343;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.md-button:hover {
+    background-color: #008000;
+}
+
+/* Modal Design End */
+
+.add-btn, .submit-btn {
+    background-color: #157343;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.add-btn:hover, .submit-btn:hover {
+    background-color: #008000;
+}
+
+/* === FOOTER === */
+.footer-container{
+    bottom: 0;
+    background-color: var(--white);
+    width: 100%;
+    height: 50px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

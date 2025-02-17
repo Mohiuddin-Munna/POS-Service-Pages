@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- === css link === -->
+    <link rel="stylesheet" href="css/add-service.css" />
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Manage Service</title>
+  </head>
+
+  <body>
+    <section>
+      <!-- === TOP SECTION === -->
+    <div class="navbar">
+      <div>
+        <button><a href="manage-service.html">Manage Service</a></button>
+        <button class="active">Add Service</button>
+        <button>Service Type</button>
+      </div>
+    </div>
+
+    <!-- === QUOTATION LIST SECTION === -->
+    <div class="quotation-list-section">
+      <!-- === quotation-container === -->
+      <div class="quotation-container">
+        <p>Manage Service</p>
+        <div class="quotation-right-container">
+          <ul>
+            <li>
+              <i class="fa-solid fa-list" style="color: #ffffff;"></i>
+              <a href="#">Manage Service</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <hr />
+      <!-- === Add Service === -->
+      <div class="container">
+        <form id="addServiceForm">
+          <div class="form-group">
+            <label for="serviceName">Service Name*</label>
+            <input
+              type="text"
+              id="serviceName"
+              placeholder="Service Name"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <div>
+              <label for="serviceType">Service Type*</label>
+            </div>
+            <div class="dropdown">
+              <div style="width: 100%;">
+                <button class="dropbtn">Select One</button>
+                <div class="dropdown-content">
+                  <input
+                    type="text"
+                    placeholder="Search..."
+                    id="dropdownInput"
+                  />
+                  <br />
+                  <p>Select one</p>
+                </div>
+              </div>
+              <button id="openModal" class="addButton">+</button>
+
+            <!-- Modal Design -->
+
+              <div id="modal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h2>Service Type Add</h2>
+                        <form id="serviceTypeForm">
+                            <label for="typeName">Type Name*</label>
+                            <input type="text" id="typeName" name="typeName" required placeholder="Type Name">
+            
+                            <label for="status">Status*</label>
+                            <select id="status" required>
+                              <option value="active">Active</option>
+                              <option value="inactive">Inactive</option>
+                            </select>
+            
+                            <button class="md-button" type="submit">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            <!-- Modal Design End -->
+            </div>
+
+          <div class="form-group">
+            <label for="charge">Charge*</label>
+            <input type="number" id="charge" placeholder="0.00" required />
+          </div>
+
+          <div class="form-group">
+            <label for="vat">Service VAT%</label>
+            <input type="number" id="vat" placeholder="0.00" required />
+          </div>
+
+          <div class="form-group">
+            <label for="description">Description*</label>
+            <textarea id="description" rows="4" required></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="status">Status*</label>
+            <select id="status" required>
+              <option value="active">Active</option>
+              <option value="inactive">Inactive</option>
+            </select>
+          </div>
+
+          <button type="submit" class="submit-btn">Submit</button>
+        </form>
+      </div>
+    </div>
+    </section>
+    
+    <section>
+      <!-- === FOOTER === -->
+    <div class="footer-container">
+      <p>@2025.All Rights Reserved.</p>
+      <p>Design By:Munna</p>
+    </div>
+    </section>
+    
+
+    <script src="js/add-service.js"></script>
+  </body>
+</html>
