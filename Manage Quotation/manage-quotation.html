@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- === css link === -->
-    <link rel="stylesheet" href="css/manage-service.css">
+    <link rel="stylesheet" href="css/manage-quotation.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Manage Service</title>
+    <title>Manage Quotation</title>
 
 </head>
 
@@ -16,9 +16,8 @@
     <!-- === TOP SECTION === -->
     <div class="navbar">
         <div>
-          <button class="active"><a href="">Manage Service</a></button>
-          <button><a href="add-service.html">Add Service</a></button>
-          <button><a href="service-type.html">Service Type</a></button>
+          <button class="active"><a href="">Manage Quotation</a></button>
+          <button><a href="">Create Quotation</a></button>
         </div>
     </div>
 
@@ -26,9 +25,13 @@
     <div class="quotation-list-section">
         <!-- === quotation-container === -->
         <div class="quotation-container">
-            <p>Manage Service</p>
+            <p>Manage Quotation</p>
             <div class="quotation-right-container">
                 <ul>
+                    <li>
+                        <i class="fa-solid fa-filter" style="color: #ffffff;"></i>
+                        <a href="#">Filter</a>
+                    </li>
                     <li>
                         <i class="fa-solid fa-plus" style="color: #ffffff;"></i>
                         <a href="#">Add Service</a>
@@ -61,12 +64,9 @@
                 <thead>
                     <tr>
                         <th>SL</th>
-                        <th>Service Name</th>
-                        <th>Service Type</th>
-                        <th>Charge (BDT)</th>
-                        <th>VAT (BDT)</th>
-                        <th>Description</th>
-                        <th>Status</th>
+                        <th>Customer Name</th>
+                        <th>Total Amount (BDT)</th>
+                        <th>Quotation Date</th>
                         <th>Action</th>
                     </tr>
                 </thead>
@@ -74,11 +74,8 @@
                     <tr>
                         <td>01</td>
                         <td>Omuk</td>
-                        <td>Omuk</td>
-                        <td>8633</td>
-                        <td>18</td>
-                        <td>No Description</td>
-                        <td><span>Active</span></td>
+                        <td>500tk</td>
+                        <td>05-08-2025</td>
                         <td>
                             <div class="editable-container">
                                 <!-- === EDIT ICON === -->
