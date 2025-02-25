@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- === css link === -->
+    <link rel="stylesheet" href="css/create-quotation.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Create Quotation</title>
+
+</head>
+
+<body>
+    <!-- === TOP SECTION === -->
+    <div class="navbar">
+        <div>
+          <button><a href="manage-quotation.html">Manage Quotation</a></button>
+          <button class="active"><a href="">Create Quotation</a></button>
+        </div>
+    </div>
+
+    <!-- === QUOTATION LIST SECTION === -->
+    <div class="quotation-list-section">
+
+        <div class="create-quotation">
+            <div class="customer-details">
+                <div class="form-group">
+                    <div>
+                      <label for="serviceType">Customer Name*</label>
+                    </div>
+                    <div class="dropdown">
+                      <div style="width: 100%;">
+                        <button class="drop-btn">Select Customer</button>
+                        <div class="dropdown-content">
+                          <input
+                            type="text"
+                            placeholder="Search..."
+                            id="dropdownInput"
+                          />
+                          <br />
+                          <p>Select Customer</p>
+                        </div>
+                      </div>
+                      <button id="openModal" class="addButton">+</button>
+        
+                     <!-- Modal Design -->
+        
+                      <div id="modal" class="modal">
+                            <div class="modal-content">
+                                <div class="modal-head">
+                                    <span class="close">&times;</span>
+                                    <h2>Add New Customer</h2>
+                                </div>
+                                <hr>
+                                <form action="#" class="modal-body">
+                                    <div class="modal-form">
+                                        <div class="form-group">
+                                            <label for="Customer Name">Customer Name*</label>
+                                            <input type="text" placeholder="Customer Name">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="Email Address">Email Address*</label>
+                                            <input type="email" placeholder="Email Address">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="Phone No">Phone No*</label>
+                                            <input type="number" placeholder="Phone No">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="Billing Address">Billing Address</label>
+                                            <textarea name="billing-address" rows="2" class="form-control" placeholder="Billing Address" data-has-listeners="true" autocomplete="off" style="height: 100px;" spellcheck="false"></textarea>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="City">City</label>
+                                            <input type="text" placeholder="City">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="Country">Country</label>
+                                            <input type="text" placeholder="Country">
+                                        </div>
+                                    </div>
+
+
+                                    <div class="modal-form">
+                                        <div class="form-group">
+                                            <label for="Mobile No.">Mobile No</label>
+                                            <input type="number" placeholder="Mobile No.">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="BIN No.">BIN No.</label>
+                                            <input type="number" placeholder="Mobile No.">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="CR No.">CR No.<span title="Commercial Registration Number"><i class="fa fa-question-circle" aria-hidden="true"></i></span>
+                                            </label>
+                                            <input type="number" placeholder="CR No.">
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label for="Delivery Address">Delivery Address</label>
+                                            <textarea name="billing-address" rows="2" class="form-control" placeholder="Delivery Address" data-has-listeners="true" autocomplete="off" style="height: 100px;" spellcheck="false"></textarea>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="State">State</label>
+                                            <input type="text" placeholder="State">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="Zip Code">Zip Code</label>
+                                            <input type="text" placeholder="Zip Code">
+                                        </div>
+                                    </div>
+                                </form>
+                                <div style="display: flex; justify-content: end; padding: 20px;">
+                                    <button class="md-button" type="submit">Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                    <!-- Modal Design End -->
+                    </div>
+                </div>
+
+                <!-- Calendar Start -->
+                <div class="form-group">
+                    <label for="quotation-date">Quotation Date</label>
+                    <input 
+                        type="text" 
+                        id="quotation-date" 
+                        class="form-control" 
+                        value="2025-02-12" 
+                        readonly
+                    >
+                </div>
+        
+                <!-- Calendar Container -->
+                <div class="calendar" id="calendar">
+                    <div class="calendar-header">
+                        <select id="month-select">
+                            <option value="0">January</option>
+                            <option value="1">February</option>
+                            <option value="2">March</option>
+                            <option value="3">April</option>
+                            <option value="4">May</option>
+                            <option value="5">June</option>
+                            <option value="6">July</option>
+                            <option value="7">August</option>
+                            <option value="8">September</option>
+                            <option value="9">October</option>
+                            <option value="10">November</option>
+                            <option value="11">December</option>
+                        </select>
+                        <select id="year-select"></select>
+                    </div>
+                    <table class="calendar-grid">
+                        <thead>
+                            <tr>
+                                <th>Su</th>
+                                <th>Mo</th>
+                                <th>Tu</th>
+                                <th>We</th>
+                                <th>Th</th>
+                                <th>Fr</th>
+                                <th>Sa</th>
+                            </tr>
+                        </thead>
+                        <tbody id="calendar-body">
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Calendar End -->
+
+            </div>
+
+            <!-- message -->
+            <div class="customer-details">
+                <label for="serviceType">Customer Details*</label>
+                <textarea name="details" rows="2" class="form-control" placeholder="Details" data-has-listeners="true" autocomplete="off" style="height: 143px;" spellcheck="false"></textarea>
+            </div>
+        </div>
+        <!-- === PRODUCT ALL DETAILS === -->
+        <div class="sh-produt-all-details-container">
+            <!-- Start Table -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>Service Name</th>
+                        <th>Qty</th>
+                        <th>Charge</th>
+                        <th>Remark</th>
+                        <th>dis.%</th>
+                        <th>Discount Value</th>
+                        <th>VAT %</th>
+                        <th>VAT Value</th>
+                        <th>Total</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="sh-product-search-box"><input type="text"
+                                placeholder="Service Name" name="" id="">
+                            </div>
+                        </td>
+                        <td class="sh-total-contaier">
+                            <input type="number" placeholder="Qty" value="1" name="" id="">
+                        </td>
+                        <td class="sh-av-box"><input type="number" placeholder="Charge" value="0.00" name="" id=""></td>
+                        <td class="sh-av-box"><input type="text" placeholder="Remark" value="" name="" id=""></td>
+                        <td class="sh-qty-number-input">
+                            <input type="number" placeholder="0" value="0" name="" id="">
+                        </td>
+                        <td class="sh-rate-input-container">
+                            <input type="number" placeholder="0" value="0" name="salesrate" id="">
+                        </td>
+                        <td>
+                            <div class="sh-discount-container">
+                                <div class="sh-discount-left-container">
+                                    <input type="number" placeholder="0.00" value="0.00" name="dis" id="">
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="sh-vatbox-container">
+                                <div class="sh-vat-left-container">
+                                    <input type="number" placeholder="" value="0.0" name="vat" id="">
+                                </div>
+                            </div>
+                        </td>
+                        <td class="sh-total-contaier">
+                            <input type="number" placeholder="" value="0.00" name="total" id="">
+                        </td>
+                        <td class="sh-delet-icon">
+                                <a href="#">
+                                    <i class="fa-solid fa-circle-xmark" aria-hidden="true"></i>
+                                </a>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="add-more">
+                            <button>Add More</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- End Table -->
+    </div>
+    <!-- === FOOTER === -->
+    <div class="footer-container">
+        <p>@2025.All Rights Reserved.</p>
+        <p>Design By:inspiredigitalbd</p>
+    </div>
+
+    <script src="js/create-quotation.js"></script>
+</body>
+
+</html>
