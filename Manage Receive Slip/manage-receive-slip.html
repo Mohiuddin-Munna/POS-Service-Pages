@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- === css link === -->
+    <link rel="stylesheet" href="manage-receive-slip.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Manage Receive Slip</title>
+
+</head>
+
+<body>
+
+    <!-- === QUOTATION LIST SECTION === -->
+    <div class="quotation-list-section">
+        <!-- === quotation-container === -->
+        <div class="quotation-container">
+            <p>Manage Receive Slip</p>
+            <div class="quotation-right-container">
+                <ul>
+                  <li>
+                    <i class="fas fa-filter" style="color: #ffffff;"></i>
+                    <a href="#">Filter</a>
+                  </li>
+                  <li>
+                    <i class="fa-sharp fa-solid fa-circle-plus" style="color: #ffffff;"></i>
+                    <a href="#">Create Receive Slip</a>
+                  </li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <!-- === QUOTATION SECOND SECTION === -->
+        <div class="quotation-second-section">
+            <div class="show-container">
+                <p>Show</p>
+                <select>
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                    <option value="30">30</option>
+                    <option value="40">40</option>
+                    <option value="50">50</option>
+                </select>
+                <p>entries</p>
+            </div>
+            <div class="search-container">
+                <label for="text">Search:</label>
+                <input type="search">
+            </div>
+        </div>
+        <!-- === TABLE SECTION === -->
+        <div class="table-section">
+            <table>
+                <thead>
+                    <tr>
+                        <th>SL</th>
+                        <th>Service Invoice No</th>
+                        <th>Payment Method</th>
+                        <th>Total Amount (BDT)</th>
+                        <th>Date</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>01</td>
+                        <td>Omuk</td>
+                        <td>Omuk</td>
+                        <td>200</td>
+                        <td>08-10-2025</td>
+                        <td>
+                            <div class="editable-container">
+                                <!-- === EDIT ICON === -->
+                                <div class="edit-icon">
+                                    <a href="#"><i class="fa-solid fa-pen-to-square"></i></a>
+                                </div>
+                                <!-- === DELETE ICON === -->
+                                <div class="delete-icon">
+                                    <a href="#"><i class="fa-regular fa-trash-can"></i></a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <p>no data available in table</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- === SALE QUOTATION BOTTOM ITEMS === -->
+        <div class="sale-quotation-bottom-items">
+            <ul>
+                <p>Showing 5 to 5 of 5 entries</p>
+                <li><a href="#">Previous</a></li>
+                <li class="page-no"><a href="#">1</a></li>
+                <li><a href="#">Next</a></li>
+            </ul>
+        </div>
+
+    </div>
+    <!-- === FOOTER === -->
+    <div class="footer-container">
+        <p>@2025.All Rights Reserved.</p>
+        <p>Design By:inspiredigitalbd</p>
+    </div>
+
+</body>
+
+</html>

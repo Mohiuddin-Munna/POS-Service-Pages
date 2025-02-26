@@ -29,7 +29,7 @@
     <div class="quotation-list-section">
         <!-- === quotation-container === -->
         <div class="quotation-container">
-            <p>Manage Quotation</p>
+            <p>Service Invoice</p>
             <div class="quotation-right-container">
                 <ul>
                     <li>
@@ -158,55 +158,50 @@
                         readonly
                     >
                 </div>
-        
-                <!-- Calendar Container -->
-                <div class="calendar" id="calendar">
-                    <div class="calendar-header">
-                        <select id="month-select">
-                            <option value="0">January</option>
-                            <option value="1">February</option>
-                            <option value="2">March</option>
-                            <option value="3">April</option>
-                            <option value="4">May</option>
-                            <option value="5">June</option>
-                            <option value="6">July</option>
-                            <option value="7">August</option>
-                            <option value="8">September</option>
-                            <option value="9">October</option>
-                            <option value="10">November</option>
-                            <option value="11">December</option>
-                        </select>
-                        <select id="year-select"></select>
+
+                <!-- Select Quotation -->
+
+                <div class="form-group">
+                    <div>
+                      <label for="serviceType">Customer Name*</label>
                     </div>
-                    <table class="calendar-grid">
-                        <thead>
-                            <tr>
-                                <th>Su</th>
-                                <th>Mo</th>
-                                <th>Tu</th>
-                                <th>We</th>
-                                <th>Th</th>
-                                <th>Fr</th>
-                                <th>Sa</th>
-                            </tr>
-                        </thead>
-                        <tbody id="calendar-body">
-                        </tbody>
-                    </table>
+                    <div class="dropdown">
+                      <div style="width: 100%;">
+                        <button class="drop-btn">Select Quotation</button>
+                        <div class="dropdown-content">
+                          <input
+                            type="text"
+                            placeholder="Search..."
+                            id="dropdownInput"
+                          />
+                          <br />
+                          <p>Select Customer</p>
+                        </div>
+                      </div>
+                    </div>
                 </div>
-
-                <!-- Calendar End -->
-
             </div>
 
             <!-- message -->
             <div class="customer-details">
-                <label for="serviceType">Customer Details*</label>
-                <textarea name="details" rows="2" class="form-control" placeholder="Details" data-has-listeners="true" autocomplete="off" style="height: 143px;" spellcheck="false"></textarea>
+                <div class="form-group">
+                    <label for="quotation-date">Delivery Date</label>
+                    <input 
+                        type="text" 
+                        id="quotation-date" 
+                        class="form-control" 
+                        value="2025-02-12" 
+                        readonly
+                    >
+                </div>
+                <div class="form-group">
+                    <label for="serviceType">Details</label>
+                    <textarea name="details" rows="2" class="form-control" placeholder="Details" data-has-listeners="true" autocomplete="off" style="height: 143px;" spellcheck="false"></textarea>
+                </div>
             </div>
         </div>
         <!-- === PRODUCT ALL DETAILS === -->
-        <div class="sh-produt-all-details-container">
+        <div class="sh-product-all-details-container">
             <!-- Start Table -->
             <table>
                 <thead>
@@ -266,8 +261,65 @@
                         </td>
                     </tr>
                     <tr>
-                        <td class="add-more">
-                            <button>Add More</button>
+                        <td>
+                            <div>
+                                <button class="add-more-btn">Add More</button>
+                            </div>
+                        </td>
+                        <td>
+                            <div></div>
+                        </td>
+                        <td>
+                            <div></div>
+                        </td>
+                        <td>
+                            <div></div>
+                        </td>
+                        <td>
+                            <div></div>
+                        </td>
+                        <td>
+                            <div></div>
+                        </td>
+                        <td>
+                            <div>
+                                <h5>Paid Amount:</h5>
+                            </div>
+                        </td>
+                        <td colspan="2">
+                            <div>
+                                <input type="text" name="" id="" readonly="readonly" value="0">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div></div>
+                        </td>
+                        <td>
+                            <div></div>
+                        </td>
+                        <td>
+                            <div></div>
+                        </td>
+                        <td>
+                            <div></div>
+                        </td>
+                        <td>
+                            <div></div>
+                        </td>
+                        <td>
+                            <div></div>
+                        </td>
+                        <td>
+                            <div>
+                                <h5>Change Amount:</h5>
+                            </div>
+                        </td>
+                        <td colspan="2">
+                            <div>
+                                <input type="text" name="" id="" readonly="readonly" value="0">
+                            </div>
                         </td>
                     </tr>
                 </tbody>
@@ -278,8 +330,27 @@
     </div>
     <!-- === FOOTER === -->
     <div class="footer-container">
-        <p>@2025.All Rights Reserved.</p>
-        <p>Design By:inspiredigitalbd</p>
+        <ul class="footer-content">
+            <li>
+                <b>Total</b>
+                <input type="number" name="total" id="total" value="0.00" readonly="readonly" autocomplete="off" data-has-listeners="true">
+            </li>
+            <li>
+                <b>Service Discount</b>
+                <input type="number" name="service-discount-amount" id="service-discount-amount" value="0.00" readonly="readonly" autocomplete="off" data-has-listeners="true">
+            </li>
+            <li>
+                <b>Total VAT</b>
+                <input type="number" name="total-vat" id="total-vat" value="0.00" readonly="readonly" autocomplete="off" data-has-listeners="true">
+            </li>
+            <li>
+                <b>Net Total</b>
+                <input type="number" name="net-total" id="net-total" value="0.00" readonly="readonly" autocomplete="off" data-has-listeners="true">
+            </li>
+            <li>
+                <button>Submit</button>
+            </li>
+        </ul>
     </div>
 
     <script src="js/create-service-invoice.js"></script>
