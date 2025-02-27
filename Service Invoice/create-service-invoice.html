@@ -330,27 +330,44 @@
     </div>
     <!-- === FOOTER === -->
     <div class="footer-container">
-        <ul class="footer-content">
-            <li>
-                <b>Total</b>
-                <input type="number" name="total" id="total" value="0.00" readonly="readonly" autocomplete="off" data-has-listeners="true">
-            </li>
-            <li>
-                <b>Service Discount</b>
-                <input type="number" name="service-discount-amount" id="service-discount-amount" value="0.00" readonly="readonly" autocomplete="off" data-has-listeners="true">
-            </li>
-            <li>
-                <b>Total VAT</b>
-                <input type="number" name="total-vat" id="total-vat" value="0.00" readonly="readonly" autocomplete="off" data-has-listeners="true">
-            </li>
-            <li>
-                <b>Net Total</b>
-                <input type="number" name="net-total" id="net-total" value="0.00" readonly="readonly" autocomplete="off" data-has-listeners="true">
-            </li>
-            <li>
-                <button>Submit</button>
-            </li>
-        </ul>
+        <div>
+            <ul class="footer-content">
+                <li>
+                    <b>Total</b>
+                    <input type="number" name="total" id="total" value="0.00" readonly="readonly" autocomplete="off" data-has-listeners="true">
+                </li>
+                <li>
+                    <b>Service Discount</b>
+                    <input type="number" name="service-discount-amount" id="service-discount-amount" value="0.00" readonly="readonly" autocomplete="off" data-has-listeners="true">
+                </li>
+                <li>
+                    <b>Total VAT</b>
+                    <input type="number" name="total-vat" id="total-vat" value="0.00" readonly="readonly" autocomplete="off" data-has-listeners="true">
+                </li>
+                <li>
+                    <b>Previous Due</b>
+                    <input type="number" name="net-total" id="net-total" value="0.00" readonly="readonly" autocomplete="off" data-has-listeners="true">
+                </li>
+            </ul>
+            <div>
+                <ul class="footer-content">
+                    <li>
+                        <b>Net Total</b>
+                        <input type="number" name="net-total" id="net-total" value="0.00" readonly="readonly" autocomplete="off" data-has-listeners="true">
+                    </li>
+                    <li>
+                        <b>Current Due</b>
+                        <input type="number" name="net-total" id="net-total" value="0.00" readonly="readonly" autocomplete="off" data-has-listeners="true">
+                    </li>
+                    <li>
+                        <button>Payment</button>
+                    </li>
+                    <li>
+                        <button>Submit</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
 
     <script src="js/create-service-invoice.js"></script>
